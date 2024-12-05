@@ -1,10 +1,13 @@
 import React from 'react'
 import OneProduct from './OneProduct'
 
-const Products = ({ products, category, handleAdd }) => {
+const Cart = ({ products, handleAdd }) => {
     return (
         <>
-            <h2>All products in category {category}</h2>
+            {products.length === 0 ? <h2>No products in cart</h2> :
+                <h2>My cart</h2>
+            }
+
             <div className='all-products'>
                 {products.map((p) => {
                     return <OneProduct product={p} handleAdd={handleAdd} />
@@ -19,4 +22,4 @@ const Products = ({ products, category, handleAdd }) => {
     )
 }
 
-export default Products
+export default Cart

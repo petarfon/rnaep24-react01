@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function NavBar() {
+function NavBar({ cartNum }) {
     return (
         <div className='navBar'>
-            <a className='site-title' href="#">E-shop</a>
+            <Link className='site-title' to="/">E-shop</Link>
+            <p className="cart-num">{cartNum}</p>
+            <Link to="/cart">Cart</Link>
         </div>
     )
 }
