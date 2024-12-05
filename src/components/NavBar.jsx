@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function NavBar({ cartNum }) {
     return (
         <div className='navBar'>
-            <Link className='site-title' to="/">E-shop</Link>
+            <Link to="/"><h2 className="site-title">E-shop</h2></Link>
             <p className="cart-num">{cartNum}</p>
             <Link to="/cart">Cart</Link>
         </div>

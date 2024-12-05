@@ -17,16 +17,7 @@ const OneProduct = ({ product, handleAdd }) => {
                 <p className="card-text">
                     {product.description}
                 </p>
-                {location.pathname !== '/'
-                    ?
-                    <p className="card-text">
-                        Amount: {product.amount}
-                    </p>
-                    :
-                    ''
-                }
-
-                {location.pathname === '/cart' &&
+                {location.pathname === '/' ? '' :
                     <p className="card-text">
                         Amount: {product.amount}
                     </p>
