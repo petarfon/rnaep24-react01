@@ -10,7 +10,7 @@ const Cart = ({ products, handleAdd }) => {
 
             <div className='all-products'>
                 {products.map((p) => {
-                    return <OneProduct product={p} handleAdd={handleAdd} />
+                    return <OneProduct product={p} key={p.id} handleAdd={handleAdd} />
                 })}
 
                 {/* <OneProduct product={products[0]} />
